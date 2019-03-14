@@ -1,0 +1,19 @@
+{
+  "name": "giphygraphql",
+  "version": "1.0.0",
+  "description": "graphql layer on giphy's rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nir",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.3.2",
+    "apollo-server": "^2.4.8",
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "esm": "^3.2.15"
+  }
+}
