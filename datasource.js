@@ -1,5 +1,5 @@
-import { RESTDataSource } from 'apollo-datasource-rest';
-import { GIPHY_KEY } from './config.json';
+const { RESTDataSource } = require('apollo-datasource-rest');
+const { GIPHY_KEY } = require('./config.json');
 
 export class GiphyAPI extends RESTDataSource {
   constructor() {

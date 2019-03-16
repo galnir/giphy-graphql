@@ -1,31 +1,7 @@
-import { ApolloServer, gql } from 'apollo-server';
-import { GiphyAPI } from './datasource';
-
-const typeDefs = gql`
-  type Gif {
-    id: String!
-    title: String!
-    url: String!
-    username: String!
-    rating: String!
-    source: String!
-    import_datetime: String!
-  }
-
-  type Query {
-    gif(query: String!): Gif
-    gifs(query: String!): [Gif]
-  }
-`;
-
-const resolvers = {
-  Query: {
-    gif: (root, { query }, { dataSources }) =>
-      dataSources.GiphyAPI.getAGif(query),
-    gifs: (root, { query }, { dataSources }) =>
-      dataSources.GiphyAPI.getGifs(query)
-  }
-};
+const { ApolloServer } = require('apollo-server');
+const { GiphyAPI } = require('./datasource');
+const { typeDefs } = require('./typeDefs');
+const { resolvers } = require('./resolvers');
 
 const server = new ApolloServer({
   typeDefs,
