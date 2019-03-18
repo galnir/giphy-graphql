@@ -1,11 +1,11 @@
-const { ApolloServer } = require('apollo-server');
-const { GiphySearchAPI } = require('./search/search.datasource');
-const { GiphyTrendingAPI } = require('./trending/trending.datasource');
-const { searchTypeDefs } = require('./search/search.typeDefs');
-const { searchResolvers } = require('./search/search.resolvers');
-const { trendingTypeDefs } = require('./trending/trending.typeDefs');
-const { trendingResolvers } = require('./trending/trending.resolvers');
-const merge = require('lodash.merge');
+import { ApolloServer } from 'apollo-server';
+import { GiphySearchAPI } from './search/search.datasource';
+import { GiphyTrendingAPI } from './trending/trending.datasource';
+import { searchTypeDefs } from './search/search.typeDefs';
+import { searchResolvers } from './search/search.resolvers';
+import { trendingTypeDefs } from './trending/trending.typeDefs';
+import { trendingResolvers } from './trending/trending.resolvers';
+import merge from 'lodash.merge';
 
 const typeDefs = [searchTypeDefs, trendingTypeDefs];
 
