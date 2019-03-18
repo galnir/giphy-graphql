@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server');
 
-export const typeDefs = gql`
+export const searchTypeDefs = gql`
   type Gif {
     type: String
     id: String

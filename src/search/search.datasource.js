@@ -1,7 +1,7 @@
 const { RESTDataSource } = require('apollo-datasource-rest');
-const { GIPHY_KEY } = require('./config.json');
+const { GIPHY_KEY } = require('../../config.json');
 
-export class GiphyAPI extends RESTDataSource {
+export class GiphySearchAPI extends RESTDataSource {
   constructor() {
     super();
     this.baseURL = `http://api.giphy.com/v1/gifs/`;

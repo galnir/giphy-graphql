@@ -1,4 +1,4 @@
-export const resolvers = {
+export const searchResolvers = {
   Gif: {
     images(data) {
       return data.images.original;
@@ -10,8 +10,8 @@ export const resolvers = {
   },
   Query: {
     gif: (root, { query }, { dataSources }) =>
-      dataSources.GiphyAPI.getAGif(query),
+      dataSources.GiphySearchAPI.getAGif(query),
     gifs: (root, { query }, { dataSources }) =>
-      dataSources.GiphyAPI.getGifs(query)
+      dataSources.GiphySearchAPI.getGifs(query)
   }
 };
