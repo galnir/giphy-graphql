@@ -12,7 +12,8 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.3.2",
     "apollo-server": "^2.4.8",
-    "graphql": "^0.13.2"
+    "graphql": "^0.13.2",
+    "lodash.merge": "^4.6.1"
   },
   "devDependencies": {
     "esm": "^3.2.15"
