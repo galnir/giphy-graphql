@@ -1,16 +1,16 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { GIPHY_KEY } from '../../config.json';
+import { GIPHY_KEY } from '../../../config.json';
 
-export class GiphyRandomAPI extends RESTDataSource {
+export class GiphyTranslateAPI extends RESTDataSource {
   constructor() {
     super();
     this.baseURL = `http://api.giphy.com/v1/gifs/`;
   }
 
-  async getRandomGif(query) {
-    const data = await this.get('random', {
+  async getTranslateGif(query) {
+    const data = await this.get('translate', {
       api_key: GIPHY_KEY,
-      tag: query
+      s: query
     });
     return data.data;
   }
