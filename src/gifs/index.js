@@ -8,14 +8,14 @@ import { translateTypeDefs } from './translate/translate.typeDefs';
 import { translateResolvers } from './translate/translate.resolvers';
 import merge from 'lodash.merge';
 
-export const typeDefs = [
+export const GifsTypeDefs = [
   searchTypeDefs,
   trendingTypeDefs,
   randomTypeDefs,
   translateTypeDefs
 ];
 
-export const resolvers = merge(
+export const GifResolvers = merge(
   {},
   searchResolvers,
   trendingResolvers,
