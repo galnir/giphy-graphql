@@ -6,6 +6,6 @@ export const translateResolvers = {
   },
   Query: {
     getTranslateGif: (root, { query }, { dataSources }) =>
-      dataSources.GiphyTranslateAPI.getTranslateGif(query)
+      dataSources.GifsTranslateAPI.getTranslateGif(query)
   }
 };
