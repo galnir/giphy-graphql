@@ -4,7 +4,7 @@ export const stickerSearchResolvers = {
       return data.images.original;
     },
     user(data) {
-      if (!user) return null;
+      if (!data.user) return null;
       else return data.user;
     }
   },
