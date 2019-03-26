@@ -1,4 +1,4 @@
-export const randomResolvers = {
+export const gifRandomResolvers = {
   RandomGif: {
     images(data) {
       return data.images.original;

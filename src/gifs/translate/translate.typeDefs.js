@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const translateTypeDefs = gql`
+export const gifTranslateTypeDefs = gql`
   type TranslateGif {
     type: String
     id: String!

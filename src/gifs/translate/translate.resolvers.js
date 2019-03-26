@@ -1,4 +1,4 @@
-export const translateResolvers = {
+export const gifTranslateResolvers = {
   TranslateGif: {
     images(data) {
       return data.images.original;

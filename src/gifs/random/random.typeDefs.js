@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const randomTypeDefs = gql`
+export const gifRandomTypeDefs = gql`
   type RandomGif {
     type: String
     id: String!

@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server';
 
-export const trendingTypeDefs = gql`
+export const gifTrendingTypeDefs = gql`
   extend type Query {
     getTrendingGifs: [Gif]!
   }

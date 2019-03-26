@@ -1,4 +1,4 @@
-export const searchResolvers = {
+export const gifSearchResolvers = {
   Gif: {
     images(data) {
       return data.images.original;
