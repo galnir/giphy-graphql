@@ -18,15 +18,8 @@ export const translateTypeDefs = gql`
     is_sticker: Int
     import_datetime: String
     trending_datetime: String
-    images: OriginalStillImage
+    images: Image
     title: String
-  }
-
-  type OriginalStillImage {
-    url: String
-    width: String
-    height: String
-    size: String
   }
 
   extend type Query {

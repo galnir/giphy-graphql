@@ -1,7 +1,7 @@
 export const translateResolvers = {
   TranslateGif: {
     images(data) {
-      return data.images.original_still;
+      return data.images.original;
     }
   },
   Query: {

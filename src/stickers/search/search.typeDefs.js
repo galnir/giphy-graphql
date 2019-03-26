@@ -20,31 +20,8 @@ export const stickerSearchTypeDefs = gql`
     import_datetime: String
     trending_datetime: String
     user: User # Some gifs do not have a user
-    images: StickerImage
+    images: Image
     _score: Int
-  }
-
-  type StickerImage {
-    url: String
-    width: String
-    height: String
-    size: String
-    frames: String
-    mp4: String
-    mp4_size: String
-    webp: String
-    webp_size: String
-    hash: String
-  }
-
-  type StickerUser {
-    avatar_url: String
-    banner_url: String
-    banner_image: String
-    profile_url: String
-    username: String
-    display_name: String
-    is_verified: Boolean
   }
 
   extend type Query {

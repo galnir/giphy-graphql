@@ -17,11 +17,9 @@ export const randomTypeDefs = gql`
     is_sticker: Int
     import_datetime: String
     trending_datetime: String
+    user: User
+    images: Image
     title: String
-    image_url: String
-    image_frames: String
-    image_width: String
-    image_height: String
     caption: String
   }
 
