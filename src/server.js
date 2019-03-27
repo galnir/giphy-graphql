@@ -9,6 +9,7 @@ import { StickersSearchAPI } from './stickers/search/search.datasource';
 import { stickerTypeDefs } from './stickers/index';
 import { stickerResolvers } from './stickers/index';
 import { StickersTrendingAPI } from './stickers/trending/trending.datasource';
+import { StickersRandomAPI } from './stickers/random/random.datasource';
 import merge from 'lodash.merge';
 
 const typeDefs = [...GifsTypeDefs, ...stickerTypeDefs];
@@ -23,7 +24,8 @@ const server = new ApolloServer({
     GifsRandomAPI: new GifsRandomAPI(),
     GifsTranslateAPI: new GifsTranslateAPI(),
     StickersSearchAPI: new StickersSearchAPI(),
-    StickersTrendingAPI: new StickersTrendingAPI()
+    StickersTrendingAPI: new StickersTrendingAPI(),
+    StickersRandomAPI: new StickersRandomAPI()
   })
 });
 
