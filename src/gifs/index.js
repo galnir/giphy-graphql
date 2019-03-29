@@ -6,13 +6,16 @@ import { gifRandomTypeDefs } from './random/random.typeDefs';
 import { gifRandomResolvers } from './random/random.resolvers';
 import { gifTranslateTypeDefs } from './translate/translate.typeDefs';
 import { gifTranslateResolvers } from './translate/translate.resolvers';
+import { gifIdTypeDefs } from './gif_id/gif_id.typeDefs';
+import { gifIdResolvers } from './gif_id/gif_id.resolvers';
 import merge from 'lodash.merge';
 
 export const GifsTypeDefs = [
   gifSearchTypeDefs,
   gifTrendingTypeDefs,
   gifRandomTypeDefs,
-  gifTranslateTypeDefs
+  gifTranslateTypeDefs,
+  gifIdTypeDefs
 ];
 
 export const GifResolvers = merge(
@@ -20,5 +23,6 @@ export const GifResolvers = merge(
   gifSearchResolvers,
   gifTrendingResolvers,
   gifRandomResolvers,
-  gifTranslateResolvers
+  gifTranslateResolvers,
+  gifIdResolvers
 );
