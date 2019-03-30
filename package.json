@@ -16,6 +16,6 @@
     "lodash.merge": "^4.6.1"
   },
   "devDependencies": {
-    "esm": "^3.2.15"
+    "esm": "^3.2.22"
   }
 }
