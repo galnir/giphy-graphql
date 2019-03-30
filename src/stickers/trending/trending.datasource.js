@@ -7,10 +7,11 @@ export class StickersTrendingAPI extends RESTDataSource {
     this.baseURL = `http://api.giphy.com/v1/stickers/`;
   }
 
-  async getTrendingStickers() {
+  async getTrendingStickers(limit = 25, rating = 'g') {
     const data = await this.get('trending', {
       api_key: GIPHY_KEY,
-      limit: 10
+      limit,
+      rating
     });
     return data.data;
   }
