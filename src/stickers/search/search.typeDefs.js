@@ -25,7 +25,18 @@ export const stickerSearchTypeDefs = gql`
   }
 
   extend type Query {
-    getASticker(query: String!): Sticker
-    getStickers(query: String!): [Sticker]
+    getASticker(
+      query: String!
+      offset: Int
+      rating: String
+      lang: String
+    ): Sticker
+    getStickers(
+      query: String!
+      limit: Int
+      offset: Int
+      rating: String
+      lang: String
+    ): [Sticker]
   }
 `;

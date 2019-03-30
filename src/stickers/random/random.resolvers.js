@@ -8,7 +8,7 @@ export const stickerRandomResolvers = {
     }
   },
   Query: {
-    getRandomSticker: (root, { query }, { dataSources }) =>
-      dataSources.StickersRandomAPI.getRandomSticker(query)
+    getRandomSticker: (root, { tag, rating }, { dataSources }) =>
+      dataSources.StickersRandomAPI.getRandomSticker(tag, rating)
   }
 };

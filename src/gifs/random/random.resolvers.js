@@ -5,7 +5,7 @@ export const gifRandomResolvers = {
     }
   },
   Query: {
-    getRandomGif: (root, { query }, { dataSources }) =>
-      dataSources.GifsRandomAPI.getRandomGif(query)
+    getRandomGif: (root, { tag, rating }, { dataSources }) =>
+      dataSources.GifsRandomAPI.getRandomGif(tag, rating)
   }
 };

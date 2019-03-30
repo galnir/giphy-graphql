@@ -9,7 +9,7 @@ export const gifTranslateResolvers = {
     }
   },
   Query: {
-    getTranslateGif: (root, { query }, { dataSources }) =>
-      dataSources.GifsTranslateAPI.getTranslateGif(query)
+    getTranslateGif: (root, { s, weirdness }, { dataSources }) =>
+      dataSources.GifsTranslateAPI.getTranslateGif(s, weirdness)
   }
 };

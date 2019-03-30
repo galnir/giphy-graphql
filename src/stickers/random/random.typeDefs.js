@@ -43,12 +43,7 @@ export const stickerRandomTypeDefs = gql`
     caption: String
   }
 
-  input RandomStickerQueryInput {
-    tag: String
-    rating: String
-  }
-
   extend type Query {
-    getRandomSticker(input: RandomStickerQueryInput): RandomSticker
+    getRandomSticker(tag: String, rating: String): RandomSticker
   }
 `;

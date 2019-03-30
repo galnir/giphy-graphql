@@ -9,7 +9,7 @@ export const stickerTrendingResolvers = {
     }
   },
   Query: {
-    getTrendingStickers: (root, _, { dataSources }) =>
-      dataSources.StickersTrendingAPI.getTrendingStickers()
+    getTrendingStickers: (root, { limit, rating }, { dataSources }) =>
+      dataSources.StickersTrendingAPI.getTrendingStickers(limit, rating)
   }
 };
