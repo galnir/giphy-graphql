@@ -7,10 +7,11 @@ export class GifsTranslateAPI extends RESTDataSource {
     this.baseURL = `http://api.giphy.com/v1/gifs/`;
   }
 
-  async getTranslateGif(query) {
+  async getTranslateGif(s, weirdness = 0) {
     const data = await this.get('translate', {
       api_key: GIPHY_KEY,
-      s: query
+      s,
+      weirdness
     });
     return data.data;
   }
