@@ -42,7 +42,13 @@ export const stickerRandomTypeDefs = gql`
     fixed_width_small_height: String
     caption: String
   }
+
+  input RandomStickerQueryInput {
+    tag: String
+    rating: String
+  }
+
   extend type Query {
-    getRandomSticker(query: String): RandomSticker
+    getRandomSticker(input: RandomStickerQueryInput): RandomSticker
   }
 `;

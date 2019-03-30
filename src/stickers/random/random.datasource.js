@@ -7,10 +7,11 @@ export class StickersRandomAPI extends RESTDataSource {
     this.baseURL = `http://api.giphy.com/v1/stickers/`;
   }
 
-  async getRandomSticker(query) {
+  async getRandomSticker(tag = '', rating = 'g') {
     const data = await this.get('random', {
       api_key: GIPHY_KEY,
-      tag: query
+      tag,
+      rating
     });
     return data.data;
   }
