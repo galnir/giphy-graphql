@@ -19,11 +19,14 @@ export class GifsSearchAPI extends RESTDataSource {
     return data.data[Math.floor(Math.random() * limit)];
   }
 
-  async getGifs(query) {
+  async getGifs(query, limit = 25, offset = 0, rating = 'g', lang = 'en') {
     const data = await this.get('search', {
       api_key: GIPHY_KEY,
       q: query,
-      limit: 5
+      limit,
+      offset,
+      rating,
+      lang
     });
     return data.data;
   }
