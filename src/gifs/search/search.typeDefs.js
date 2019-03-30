@@ -47,8 +47,16 @@ export const gifSearchTypeDefs = gql`
     is_verified: Boolean
   }
 
+  input QueryInput {
+    query: String!
+    limit: Int
+    offset: Int
+    rating: String
+    lang: String
+  }
+
   type Query {
-    gif(query: String!): Gif
-    gifs(query: String!): [Gif]
+    gif(input: QueryInput!): Gif
+    gifs(input: QueryInput!): [Gif]
   }
 `;
