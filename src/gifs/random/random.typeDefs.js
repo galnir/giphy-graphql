@@ -43,7 +43,12 @@ export const gifRandomTypeDefs = gql`
     caption: String
   }
 
+  input RandomGifQueryInput {
+    tag: String # No tag can be specified aswell
+    rating: String
+  }
+
   extend type Query {
-    getRandomGif(query: String): RandomGif
+    getRandomGif(input: RandomGifQueryInput!): RandomGif
   }
 `;
