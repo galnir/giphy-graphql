@@ -7,10 +7,12 @@ export class GifsTrendingAPI extends RESTDataSource {
     this.baseURL = `http://api.giphy.com/v1/gifs/`;
   }
 
-  async getTrendingGifs() {
+  async getTrendingGifs(limit = 25, offset = 0, rating = 'g') {
     const data = await this.get('trending', {
       api_key: GIPHY_KEY,
-      limit: 10
+      limit,
+      offset,
+      rating
     });
     return data.data;
   }
