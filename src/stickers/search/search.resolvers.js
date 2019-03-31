@@ -9,13 +9,9 @@ export const stickerSearchResolvers = {
     }
   },
   Query: {
-    getASticker: (root, { query, offset, rating, lang }, { dataSources }) =>
+    sticker: (root, { query, offset, rating, lang }, { dataSources }) =>
       dataSources.StickersSearchAPI.getASticker(query, offset, rating, lang),
-    getStickers: (
-      root,
-      { query, limit, offset, rating, lang },
-      { dataSources }
-    ) =>
+    stickers: (root, { query, limit, offset, rating, lang }, { dataSources }) =>
       dataSources.StickersSearchAPI.getStickers(
         query,
         limit,

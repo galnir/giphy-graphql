@@ -25,13 +25,8 @@ export const stickerSearchTypeDefs = gql`
   }
 
   extend type Query {
-    getASticker(
-      query: String!
-      offset: Int
-      rating: String
-      lang: String
-    ): Sticker
-    getStickers(
+    sticker(query: String!, offset: Int, rating: String, lang: String): Sticker
+    stickers(
       query: String!
       limit: Int
       offset: Int
