@@ -9,7 +9,7 @@ export const stickerTranslateResolvers = {
     }
   },
   Query: {
-    getTranslateSticker: (root, { query }, { dataSources }) =>
+    translateSticker: (root, { query }, { dataSources }) =>
       dataSources.StickersTranslateAPI.getTranslateSticker(query)
   }
 };

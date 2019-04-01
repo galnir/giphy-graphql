@@ -9,7 +9,7 @@ export const gifIdResolvers = {
     }
   },
   Query: {
-    getGifById: (root, { id }, { dataSources }) =>
+    gifByID: (root, { id }, { dataSources }) =>
       dataSources.GifsIdAPI.getGifById(id)
   }
 };

@@ -44,6 +44,6 @@ export const stickerRandomTypeDefs = gql`
   }
 
   extend type Query {
-    getRandomSticker(tag: String, rating: String): RandomSticker
+    randomSticker(tag: String, rating: String): RandomSticker
   }
 `;
