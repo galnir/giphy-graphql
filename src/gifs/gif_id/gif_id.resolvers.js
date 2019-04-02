@@ -10,6 +10,6 @@ export const gifIdResolvers = {
   },
   Query: {
     gifByID: (root, { id }, { dataSources }) =>
-      dataSources.GifsIdAPI.getGifById(id)
+      dataSources.GifIdAPI.getGifById(id)
   }
 };
