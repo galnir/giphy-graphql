@@ -8,6 +8,8 @@ import { gifTranslateTypeDefs } from './translate/translate.typeDefs';
 import { gifTranslateResolvers } from './translate/translate.resolvers';
 import { gifIdTypeDefs } from './gif_id/gif_id.typeDefs';
 import { gifIdResolvers } from './gif_id/gif_id.resolvers';
+import { gifsIdTypeDefs } from './gifs_id/gifs_id.typeDefs';
+import { gifsIdResolvers } from './gifs_id/gifs_id.resolvers';
 import merge from 'lodash.merge';
 
 export const GifsTypeDefs = [
@@ -15,7 +17,8 @@ export const GifsTypeDefs = [
   gifTrendingTypeDefs,
   gifRandomTypeDefs,
   gifTranslateTypeDefs,
-  gifIdTypeDefs
+  gifIdTypeDefs,
+  gifsIdTypeDefs
 ];
 
 export const GifResolvers = merge(
@@ -24,5 +27,6 @@ export const GifResolvers = merge(
   gifTrendingResolvers,
   gifRandomResolvers,
   gifTranslateResolvers,
-  gifIdResolvers
+  gifIdResolvers,
+  gifsIdResolvers
 );

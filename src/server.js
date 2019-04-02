@@ -3,7 +3,8 @@ import { GifsSearchAPI } from './gifs/search/search.datasource';
 import { GifsTrendingAPI } from './gifs/trending/trending.datasource';
 import { GifsRandomAPI } from './gifs/random/random.datasource';
 import { GifsTranslateAPI } from './gifs/translate/translate.datasource';
-import { GifsIdAPI } from './gifs/gif_id/gif_id.datasource';
+import { GifIdAPI } from './gifs/gif_id/gif_id.datasource';
+import { GifsIdAPI } from './gifs/gifs_id/gifs_id.datasource';
 import { GifsTypeDefs } from './gifs/index';
 import { GifResolvers } from './gifs/index';
 import { stickerTypeDefs } from './stickers/index';
@@ -25,6 +26,7 @@ const server = new ApolloServer({
     GifsTrendingAPI: new GifsTrendingAPI(),
     GifsRandomAPI: new GifsRandomAPI(),
     GifsTranslateAPI: new GifsTranslateAPI(),
+    GifIdAPI: new GifIdAPI(),
     GifsIdAPI: new GifsIdAPI(),
     StickersSearchAPI: new StickersSearchAPI(),
     StickersTrendingAPI: new StickersTrendingAPI(),
