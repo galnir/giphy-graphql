@@ -5,6 +5,7 @@ import { GifsRandomAPI } from './gifs/random/random.datasource';
 import { GifsTranslateAPI } from './gifs/translate/translate.datasource';
 import { GifIdAPI } from './gifs/gif_id/gif_id.datasource';
 import { GifsIdAPI } from './gifs/gifs_id/gifs_id.datasource';
+import { RandomIdAPI } from './gifs/randomid/randomid.datasource';
 import { GifsTypeDefs } from './gifs/index';
 import { GifResolvers } from './gifs/index';
 import { stickerTypeDefs } from './stickers/index';
@@ -28,6 +29,7 @@ const server = new ApolloServer({
     GifsTranslateAPI: new GifsTranslateAPI(),
     GifIdAPI: new GifIdAPI(),
     GifsIdAPI: new GifsIdAPI(),
+    RandomIdAPI: new RandomIdAPI(),
     StickersSearchAPI: new StickersSearchAPI(),
     StickersTrendingAPI: new StickersTrendingAPI(),
     StickersRandomAPI: new StickersRandomAPI(),

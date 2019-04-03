@@ -10,6 +10,8 @@ import { gifIdTypeDefs } from './gif_id/gif_id.typeDefs';
 import { gifIdResolvers } from './gif_id/gif_id.resolvers';
 import { gifsIdTypeDefs } from './gifs_id/gifs_id.typeDefs';
 import { gifsIdResolvers } from './gifs_id/gifs_id.resolvers';
+import { randomIdTypeDefs } from './randomid/randomid.typeDefs';
+import { randomIdResolvers } from './randomid/randomid.resolvers';
 import merge from 'lodash.merge';
 
 export const GifsTypeDefs = [
@@ -18,7 +20,8 @@ export const GifsTypeDefs = [
   gifRandomTypeDefs,
   gifTranslateTypeDefs,
   gifIdTypeDefs,
-  gifsIdTypeDefs
+  gifsIdTypeDefs,
+  randomIdTypeDefs
 ];
 
 export const GifResolvers = merge(
@@ -28,5 +31,6 @@ export const GifResolvers = merge(
   gifRandomResolvers,
   gifTranslateResolvers,
   gifIdResolvers,
-  gifsIdResolvers
+  gifsIdResolvers,
+  randomIdResolvers
 );
