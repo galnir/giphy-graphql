@@ -1,5 +1,4 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { GIPHY_KEY } from '../../../config.json';
 
 export class StickersRandomAPI extends RESTDataSource {
   constructor() {
@@ -9,7 +8,7 @@ export class StickersRandomAPI extends RESTDataSource {
 
   async getRandomSticker(tag = '', rating = 'g') {
     const data = await this.get('random', {
-      api_key: GIPHY_KEY,
+      api_key: process.env.GIPHY_KEY,
       tag,
       rating
     });

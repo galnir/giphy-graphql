@@ -1,5 +1,4 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { GIPHY_KEY } from '../../../config.json';
 
 export class GifsIdAPI extends RESTDataSource {
   constructor() {
@@ -9,7 +8,7 @@ export class GifsIdAPI extends RESTDataSource {
 
   async getGifsByIDs(ids) {
     const data = await this.get(ids, {
-      api_key: GIPHY_KEY
+      api_key: process.env.GIPHY_KEY
     });
     return data.data;
   }

@@ -12,6 +12,7 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.3.2",
     "apollo-server": "^2.4.8",
+    "dotenv": "^7.0.0",
     "graphql": "^0.13.2",
     "lodash.merge": "^4.6.1"
   },

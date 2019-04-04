@@ -1,5 +1,4 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { GIPHY_KEY } from '../../../config.json';
 
 export class RandomIdAPI extends RESTDataSource {
   constructor() {
@@ -9,7 +8,7 @@ export class RandomIdAPI extends RESTDataSource {
 
   async getRandomId() {
     const data = await this.get('randomid', {
-      api_key: GIPHY_KEY // The key needs to be a PRODUCTION key! the basic dev is not enough
+      api_key: process.env.GIPHY_KEY // The key needs to be a PRODUCTION key! the basic dev is not enough
     });
     return data.data;
   }

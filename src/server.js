@@ -16,6 +16,8 @@ import { StickersRandomAPI } from './stickers/random/random.datasource';
 import { StickersTranslateAPI } from './stickers/translate/translate.datasource';
 import merge from 'lodash.merge';
 
+require('dotenv').config(); // enabling the dotenv package
+
 const typeDefs = [...GifsTypeDefs, ...stickerTypeDefs];
 const resolvers = merge({}, GifResolvers, stickerResolvers);
 
