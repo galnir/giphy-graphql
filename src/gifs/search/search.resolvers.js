@@ -1,9 +1,4 @@
 export const gifSearchResolvers = {
-  Gif: {
-    images(data) {
-      return data.images.original;
-    }
-  },
   Query: {
     gif: (root, { query, offset, rating, lang }, { dataSources }) =>
       dataSources.GifsSearchAPI.getAGif(query, offset, rating, lang),

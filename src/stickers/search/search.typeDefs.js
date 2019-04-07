@@ -20,7 +20,7 @@ export const stickerSearchTypeDefs = gql`
     import_datetime: String!
     trending_datetime: String!
     user: User # Some gifs do not have a user
-    images: Image
+    images: ImageType
     _score: Int!
   }
 

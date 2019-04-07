@@ -18,7 +18,7 @@ export const gifRandomTypeDefs = gql`
     import_datetime: String!
     trending_datetime: String!
     user: User
-    images: Image
+    images: ImageType
     title: String!
     image_original_url: String!
     image_url: String!
