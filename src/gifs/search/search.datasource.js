@@ -16,7 +16,6 @@ export class GifsSearchAPI extends RESTDataSource {
       lang
     });
     return data;
-    //return data.data[Math.floor(Math.random() * limit)];
   }
 
   async getGifs(query, limit = 25, offset = 0, rating = 'g', lang = 'en') {
@@ -28,6 +27,6 @@ export class GifsSearchAPI extends RESTDataSource {
       rating,
       lang
     });
-    return data.data;
+    return data;
   }
 }

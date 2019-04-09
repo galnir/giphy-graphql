@@ -1,8 +1,12 @@
 import { gql } from 'apollo-server';
 
 export const gifSearchTypeDefs = gql`
-  type Data {
+  type GifData {
     gifData: Gif!
+    pagination: Pagination!
+  }
+
+  type GifsData {
     gifsData: [Gif!]!
     pagination: Pagination!
   }
@@ -250,13 +254,13 @@ export const gifSearchTypeDefs = gql`
   }
 
   type Query {
-    gif(query: String!, offset: Int, rating: String, lang: String): Data!
+    gif(query: String!, offset: Int, rating: String, lang: String): GifData!
     gifs(
       query: String!
       limit: Int
       offset: Int
       rating: String
       lang: String
-    ): Data!
+    ): GifsData!
   }
 `;

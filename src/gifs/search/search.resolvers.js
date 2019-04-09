@@ -1,8 +1,10 @@
 export const gifSearchResolvers = {
-  Data: {
+  GifData: {
     gifData(data) {
       return data.data[Math.floor(Math.random() * data.pagination.count)];
-    },
+    }
+  },
+  GifsData: {
     gifsData(data) {
       return data.data;
     }
