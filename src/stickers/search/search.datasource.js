@@ -15,7 +15,7 @@ export class StickersSearchAPI extends RESTDataSource {
       rating,
       lang
     });
-    return data.data[Math.floor(Math.random() * limit)];
+    return data;
   }
 
   async getStickers(query, limit = 25, offset = 0, rating = 'g', lang = 'en') {
@@ -27,6 +27,6 @@ export class StickersSearchAPI extends RESTDataSource {
       rating,
       lang
     });
-    return data.data;
+    return data;
   }
 }

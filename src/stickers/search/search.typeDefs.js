@@ -1,6 +1,16 @@
 import { gql } from 'apollo-server';
 
 export const stickerSearchTypeDefs = gql`
+  type StickerData {
+    stickerData: Sticker!
+    pagination: Pagination!
+  }
+
+  type StickersData {
+    stickersData: [Sticker!]!
+    pagination: Pagination!
+  }
+
   type Sticker {
     type: String!
     id: String!
@@ -25,13 +35,18 @@ export const stickerSearchTypeDefs = gql`
   }
 
   extend type Query {
-    sticker(query: String!, offset: Int, rating: String, lang: String): Sticker!
+    sticker(
+      query: String!
+      offset: Int
+      rating: String
+      lang: String
+    ): StickerData!
     stickers(
       query: String!
       limit: Int
       offset: Int
       rating: String
       lang: String
-    ): [Sticker]!
+    ): StickersData!
   }
 `;

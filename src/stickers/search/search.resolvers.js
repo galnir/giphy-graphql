@@ -1,7 +1,12 @@
 export const stickerSearchResolvers = {
-  Sticker: {
-    images(data) {
-      return data.images.original;
+  StickerData: {
+    stickerData(data) {
+      return data.data[Math.floor(Math.random() * data.pagination.count)];
+    }
+  },
+  StickersData: {
+    stickersData(data) {
+      return data.data;
     }
   },
   Query: {
