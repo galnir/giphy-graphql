@@ -3,12 +3,12 @@ import { gql } from 'apollo-server';
 export const stickerSearchTypeDefs = gql`
   type StickerData {
     stickerData: Sticker!
-    pagination: Pagination!
+    pagination: Pagination
   }
 
   type StickersData {
     stickersData: [Sticker!]!
-    pagination: Pagination!
+    pagination: Pagination
   }
 
   type Sticker {
