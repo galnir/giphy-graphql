@@ -11,6 +11,6 @@ export class StickersTranslateAPI extends RESTDataSource {
       api_key: process.env.GIPHY_KEY,
       s: query
     });
-    return data.data;
+    return data;
   }
 }

@@ -12,6 +12,6 @@ export class StickersTrendingAPI extends RESTDataSource {
       limit,
       rating
     });
-    return data.data;
+    return data;
   }
 }
