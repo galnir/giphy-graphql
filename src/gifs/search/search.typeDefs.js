@@ -3,12 +3,12 @@ import { gql } from 'apollo-server';
 export const gifSearchTypeDefs = gql`
   type GifData {
     gifData: Gif!
-    pagination: Pagination!
+    pagination: Pagination
   }
 
   type GifsData {
     gifsData: [Gif!]!
-    pagination: Pagination!
+    pagination: Pagination
   }
 
   type Gif {
