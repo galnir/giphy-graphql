@@ -12,6 +12,6 @@ export class GifsTranslateAPI extends RESTDataSource {
       s,
       weirdness
     });
-    return data.data;
+    return data;
   }
 }
