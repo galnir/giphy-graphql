@@ -4,11 +4,13 @@ export const gifSearchTypeDefs = gql`
   type GifData {
     gifData: Gif!
     pagination: Pagination
+    meta: Meta!
   }
 
   type GifsData {
     gifsData: [Gif!]!
     pagination: Pagination
+    meta: Meta!
   }
 
   type Gif {
@@ -251,6 +253,12 @@ export const gifSearchTypeDefs = gql`
     total_count: Int!
     count: Int!
     offset: Int!
+  }
+
+  type Meta {
+    status: Int!
+    msg: String!
+    response_id: String!
   }
 
   type Query {
