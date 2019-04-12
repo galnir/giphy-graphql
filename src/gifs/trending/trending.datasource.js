@@ -13,6 +13,6 @@ export class GifsTrendingAPI extends RESTDataSource {
       offset,
       rating
     });
-    return data.data;
+    return data;
   }
 }
