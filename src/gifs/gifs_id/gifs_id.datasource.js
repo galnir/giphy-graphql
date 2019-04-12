@@ -10,6 +10,6 @@ export class GifsIdAPI extends RESTDataSource {
     const data = await this.get(ids, {
       api_key: process.env.GIPHY_KEY
     });
-    return data.data;
+    return data;
   }
 }
