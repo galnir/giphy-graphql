@@ -4,11 +4,13 @@ export const stickerSearchTypeDefs = gql`
   type StickerData {
     stickerData: Sticker!
     pagination: Pagination
+    meta: Meta!
   }
 
   type StickersData {
     stickersData: [Sticker!]!
     pagination: Pagination
+    meta: Meta!
   }
 
   type Sticker {
