@@ -1,18 +1,19 @@
 import { gql } from 'apollo-server';
 
 export const gifSearchTypeDefs = gql`
+  # Single Gif data that contains pagination and meta objects
   type GifData {
     gifData: Gif!
     pagination: Pagination
     meta: Meta!
   }
-
+  # Multiple Gifs data that contain pagination and meta objects
   type GifsData {
     gifsData: [Gif!]!
     pagination: Pagination
     meta: Meta!
   }
-
+  # The Gif type itself
   type Gif {
     type: String!
     id: String!
@@ -35,7 +36,8 @@ export const gifSearchTypeDefs = gql`
     images: ImageType
     _score: Int!
   }
-
+  # Start of image type implementations(Each one represents an image that
+  # comes back from the json response data)
   type ImageType {
     fixed_height_still: Fixed_Height_Still!
     original_still: Original_Still!
@@ -238,7 +240,9 @@ export const gifSearchTypeDefs = gql`
     height: String!
     size: String!
   }
+  # End of image types
 
+  # User type(fields match those of the user in the json response data)
   type User {
     avatar_url: String!
     banner_url: String!
@@ -248,19 +252,19 @@ export const gifSearchTypeDefs = gql`
     display_name: String!
     is_verified: Boolean!
   }
-
+  # Pagination object
   type Pagination {
     total_count: Int!
     count: Int!
     offset: Int!
   }
-
+  # Meta object
   type Meta {
     status: Int!
     msg: String!
     response_id: String!
   }
-
+  # 2 types of queries here, 'gif' for a single gif and 'gifs' for multiple gifs
   type Query {
     gif(query: String!, offset: Int, rating: String, lang: String): GifData!
     gifs(
