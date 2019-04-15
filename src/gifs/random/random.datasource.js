@@ -12,6 +12,6 @@ export class GifsRandomAPI extends RESTDataSource {
       tag,
       rating
     });
-    return data.data;
+    return data;
   }
 }

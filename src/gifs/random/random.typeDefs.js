@@ -1,6 +1,11 @@
 import { gql } from 'apollo-server';
 
 export const gifRandomTypeDefs = gql`
+  type RandomGifData {
+    gifData: RandomGif!
+    meta: Meta!
+  }
+
   type RandomGif {
     type: String!
     id: String!
@@ -44,6 +49,6 @@ export const gifRandomTypeDefs = gql`
   }
 
   extend type Query {
-    randomGif(tag: String, rating: String): RandomGif! # A tag doens't have to be specified
+    randomGif(tag: String, rating: String): RandomGifData! # A tag doens't have to be specified
   }
 `;
