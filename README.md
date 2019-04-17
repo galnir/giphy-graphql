@@ -15,7 +15,8 @@ Then install the dependencies:
 
 After you have completed the above steps you can start the server with: ```npm start```
 
-Then open http://localhost:4000/ in your browser and you should see this: ![](https://i.imgur.com/QvvrJW4.jpg)
+Then open http://localhost:4000/ in your browser and you should be able to interact with the GraphQL playground like this:
+![](https://media.giphy.com/media/KEYDFVLmDv0zknOm4B/source.gif)
 
 # Contributing
 
