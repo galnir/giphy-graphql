@@ -4,7 +4,6 @@ export const gifSearchTypeDefs = gql`
   # Single Gif data that contains pagination and meta objects
   type GifData {
     gifData: Gif!
-    pagination: Pagination
     meta: Meta!
   }
   # Multiple Gifs data that contain pagination and meta objects
