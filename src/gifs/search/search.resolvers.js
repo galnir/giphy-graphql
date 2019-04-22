@@ -20,6 +20,17 @@ export const gifSearchResolvers = {
       return data.data;
     }
   },
+  Analytics: {
+    onload(data) {
+      return data.onload.url;
+    },
+    onclick(data) {
+      return data.onclick.url;
+    },
+    onsent(data) {
+      return data.onsent.url;
+    }
+  },
   Query: {
     gif: (root, { query, offset, rating, lang }, { dataSources }) =>
       dataSources.GifsSearchAPI.getAGif(query, offset, rating, lang),

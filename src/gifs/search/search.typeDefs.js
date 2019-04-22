@@ -34,6 +34,7 @@ export const gifSearchTypeDefs = gql`
     user: User # Some gifs do not have a user
     images: ImageType
     _score: Int!
+    analytics: Analytics!
   }
   # Start of image type implementations(Each one represents an image that
   # comes back from the json response data)
@@ -250,6 +251,12 @@ export const gifSearchTypeDefs = gql`
     username: String!
     display_name: String!
     is_verified: Boolean!
+  }
+  # Analytics type
+  type Analytics {
+    onload: String!
+    onclick: String!
+    onsent: String!
   }
   # Pagination object
   type Pagination {
