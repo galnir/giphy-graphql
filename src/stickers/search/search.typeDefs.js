@@ -3,7 +3,6 @@ import { gql } from 'apollo-server';
 export const stickerSearchTypeDefs = gql`
   type StickerData {
     stickerData: Sticker!
-    pagination: Pagination
     meta: Meta!
   }
 
@@ -34,6 +33,7 @@ export const stickerSearchTypeDefs = gql`
     user: User # Some gifs do not have a user
     images: ImageType
     _score: Int!
+    analytics: Analytics!
   }
 
   extend type Query {

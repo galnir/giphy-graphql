@@ -1,7 +1,14 @@
 export const stickerSearchResolvers = {
   StickerData: {
     stickerData(data) {
-      return data.data[Math.floor(Math.random() * data.pagination.count)];
+      /*
+      translate sticker does not have a pagination object, that's why we
+      check if pagination exists so it won't break translate sticker 
+      */
+      let count = data.pagination ? data.pagination.count : 0;
+      if (count)
+        return data.data[Math.floor(Math.random() * data.pagination.count)];
+      else return data.data;
     }
   },
   StickersData: {
