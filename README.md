@@ -21,5 +21,3 @@ Then open http://localhost:4000/ in your browser and you should be able to inter
 # Contributing
 
 The goal of this project is to fully cover the Giphy API with GraphQL. If you are interested in learning more about GraphQL and what it can do, please consider contributing! Just fork this repo, write some code and create a pull request :)
-
-## Please drop a ⭐️, it would help expose the project to more developers who might be interested in it
