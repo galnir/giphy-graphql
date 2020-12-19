@@ -11,14 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "apollo-datasource-rest": "^0.3.2",
-    "apollo-server": "^2.14.2",
+    "apollo-graphql": "^0.6.0",
+    "apollo-server": "^2.19.0",
     "dotenv": "^7.0.0",
     "graphql": "^0.13.2",
     "lodash.merge": "^4.6.2"
   },
   "devDependencies": {
-    "esm": "^3.2.22",
-    "jest": "^24.7.1",
-    "nodemon": "^1.18.10"
+    "esm": "^3.2.25",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4"
   }
 }
