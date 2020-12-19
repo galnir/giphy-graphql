@@ -17,6 +17,13 @@ Then install the dependencies:
 
 After you have completed the above steps you can start the server with: `npm start`
 
+### Or use Docker:
+
+```
+docker build -t giphyQL .
+docker run --name giphyQL -p 4000:4000 -d giphyQL
+```
+
 Then open http://localhost:4000/ in your browser and you should be able to interact with the GraphQL playground like this:
 ![](https://media.giphy.com/media/KEYDFVLmDv0zknOm4B/source.gif)
 
