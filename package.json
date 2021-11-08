@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-datasource-rest": "^0.3.2",
-    "apollo-server": "^2.19.0",
+    "apollo-server": "^2.25.3",
     "dotenv": "^7.0.0",
     "graphql": "^0.13.2",
     "lodash.merge": "^4.6.2"
